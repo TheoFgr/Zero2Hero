@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'items#index'
 
   resources :users do
-    resources :bookings
-    resources :items do
+    resources :items, expect: [:index] do
       resources :bookings
     end
   end
