@@ -1,0 +1,53 @@
+#div_formulaire {
+  background-color: #406882;
+  padding: 64px;
+  border-radius: 25px;
+};
+
+#div_btn_formulaire {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+};
+
+#title_formulaire {
+  font-family: 'Permanent Marker', cursive;
+};
+
+.formulaire_title_complete {
+  margin-top: 128px;
+};
+
+.formulaire_and_Item {
+  display: flex;
+  justify-content: space-around;
+};
+
+.mini_card {
+  padding: 1%;
+  background-color: #406882;
+  text-align: inherit;
+  height: 50%;
+  margin-top: 128px;
+  border-radius: 25px;
+  padding-bottom: 90%;
+  padding-top: 3%;
+  margin-top: 116px;
+  padding-right: 16px;
+  padding-left: 16px;
+};
+
+.img_item {
+  height: 9cm;
+  width: 15cm;
+  border-radius: 25px;
+};
+
+#title_Item {
+  font-family: 'Permanent Marker', cursive;
+  margin-bottom: -110px;
+};
+
+.item_and_title {
+  margin-top: 95px;
+}
