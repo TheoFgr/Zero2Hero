@@ -2,17 +2,23 @@ class BookingsController < ApplicationController
   def index
     @booking = Booking.new
   end
-  
+
   def show
     @booking = Booking.find(params[:id])
   end
-  
+
   def new
+    @user = current_user
+    @item = Item.find(params[:item_id])
     @booking = Booking.new
   end
-  
+
   def create
-    @booking = Booking.new(params[:booking])
+    @item = Item.find(params[:item_id])
+    @user = current_user
+    @booking = Booking.new(params_booking)
+    @booking.user = @user
+    @booking.item = @item
     if @booking.save
       redirect_to user_item_bookings_path
     else
@@ -22,5 +28,7 @@ class BookingsController < ApplicationController
 
   private
 
-  params.require(:booking).permit(:user_id, :item_id)
+  def params_booking
+    params.require(:booking).permit(:start_date, :end_date)
+  end
 end
