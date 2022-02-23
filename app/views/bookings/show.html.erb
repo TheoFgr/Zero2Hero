@@ -1,0 +1,10 @@
+<h1> <%= @booking.item.name %> </h1>
+
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <%= @booking.start_date %> </li>
+    <li class="list-group-item"> <%= @booking.end_date %> </li>
+    <li class="list-group-item"> <%= @booking.user.first_name %> <%= @booking.user.last_name %></li>
+  </ul>
+</div>
