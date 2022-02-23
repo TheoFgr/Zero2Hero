@@ -1,12 +1,27 @@
-@import url("components/button");
+// @import url("components/button");
 
-h1 {
-  font-size: 20px;
-  font-family: Arial white;
+.containerz{
+  font-family: Arial;
+  color: white;
 }
 
-p {
+.item_name{
+  font-family: Arial;
+}
+
+.h2 {
   font-size: 20px;
-  font-family: Arial white;
+  font-family: Arial
+}
+
+.p {
+  font-size: 20px;
+  font-family: Arial ;
 
 }
+
+// .btn primary {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 64px;
+// };
