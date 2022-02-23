@@ -1,1 +1,16 @@
-<h1>Bienvenue sur l'index des bookings</h1>
+
+<div class="card" id="div-booking" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <% @bookings.each do |booking| %>
+      <li class="list-group-item">
+      <div class="d-flex justify-content-between">
+        <div><%= booking.item.name %></div>
+        <div><%= booking.start_date.day %>/0<%= booking.start_date.month%>/
+        <%= booking.start_date.year %> </div>
+        <div><%= booking.end_date.day%>/0<%= booking.end_date.month%>/
+        <%= booking.end_date.year%> </div>
+      </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
