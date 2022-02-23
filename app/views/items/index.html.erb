@@ -42,89 +42,16 @@
   <h1>incredible experiences to live here and nowhere else</h1>
 </div>
 <h2 class="title-items-list"> Best items for crazys dreams </h2>
-  <div class ="items-list">
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
+<div class="items-homepage">
+  <% @items.each do |item| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les 7 dragon balls">
+      <div class="card-body">
+        <h5 class="card-title"><%= item.name %></h5>
+        <p class="card-text"><%= item.description %></p>
+        <p class="item-price"><%= item.price %>$</p>
+        <%= link_to "Reserve", new_user_item_booking_path(current_user.id,item) %>
+      </div>
     </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-        <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
-    <div class="items-homepage">
-      <a href="#"><img class="item-img" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-      <h3>Items name</h3>
-      <p>description de litem lorem ipsum patin coufin</p>
-      <p class="item-price">99$</p>
-      <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 8px;">Reserve</button>
-    </div>
+  <% end %>
 </div>

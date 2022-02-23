@@ -14,6 +14,7 @@
 
 #sample-category {
   display: flex;
+  justify-content: space-between;
 }
 
 .cards-categories {
@@ -28,8 +29,7 @@
 
 .card-body {
   background-color: #B1D0E0;
-  border-bottom-right-radius: 57px;
-  border-bottom-left-radius: 10px;
+
   p {
     color: white;
   }
@@ -42,11 +42,11 @@
   background-image: url("https://cdn1-www.superherohype.com/assets/uploads/2014/06/marvel-heroes-banner.jpg");
   background-size: cover;
   width: auto;
-  height: 250px;
+  height: 350px;
   position: relative;
   h1 {
     font-size: 28px;
-    text-align: end;
+    text-align: right;
     position: absolute;
     bottom: 10px;
     color: white;
@@ -57,6 +57,7 @@
   text-align: center;
   margin-top: 30px;
   margin-bottom: 24px;
+  color: white;
 }
 
 .item-img {
@@ -66,20 +67,19 @@
 }
 
 .items-list {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   height: 600px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
 }
 
 .items-homepage {
   background-color: #406882;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px solid;
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
   h3 {
     font-size: 26px;
     margin-top: 6px;
