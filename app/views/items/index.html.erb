@@ -1,46 +1,32 @@
+
+<%# banner, revoir bouton, font du text %>
 <div class="banner_img">
-  <h1> Besoin d'un objet incroyable?</h1>
-  <a href="#" class="btn1">Devenez unique</a>
+  <h1> Anyone want to possess incredible POWER</h1>
+  <a href="#" class="btn1">Become a legend</a>
 </div>
-<div class="cards-categories">
-  <div class="card" id="sample-category" style="width: 18rem;">
-  <a href=""><img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-    <div class="card-body">
-      <a href=""><p class="card-text">Mangas</p></a>
-    </div>
-  </div>
 
-  <div class="card" id="sample-category" style="width: 18rem;">
-  <a href=""><img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-    <div class="card-body">
-      <a href=""><p class="card-text">Mangas</p></a>
+<div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape"/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
     </div>
   </div>
-
-  <div class="card" id="sample-category" style="width: 18rem;">
-  <a href=""><img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-    <div class="card-body">
-      <a href=""><p class="card-text">Mangas</p></a>
-    </div>
-  </div>
-
-  <div class="card" id="sample-category" style="width: 18rem;">
-  <a href=""><img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-    <div class="card-body">
-      <a href=""><p class="card-text">Mangas</p></a>
-    </div>
-  </div>
-
-  <div class="card" id="sample-category" style="width: 18rem;">
-  <a href=""><img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les sept dragon ball"></a>
-    <div class="card-body">
-      <a href=""><p class="card-text">Mangas</p></a>
-    </div>
-  </div>
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-<div class="mid-banner">
-  <h1>incredible experiences to live here and nowhere else</h1>
-</div>
+
 <h2 class="title-items-list"> Best items for crazys dreams </h2>
 <div class="items-homepage">
   <% @items.each do |item| %>
@@ -49,8 +35,8 @@
       <div class="card-body">
         <h5 class="card-title"><%= item.name %></h5>
         <p class="card-text"><%= item.description %></p>
-        <p class="item-price"><%= item.price %>$</p>
-        <%= link_to "Reserve", new_user_item_booking_path(current_user.id,item) %>
+        <p class="item-price"><%= item.price %>$/day</p>
+        <span class="btn2"><%= link_to "Reserve", new_user_item_booking_path(current_user.id,item) %></span>
       </div>
     </div>
   <% end %>
