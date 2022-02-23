@@ -1,0 +1,30 @@
+<%# <h1>Booking New</h1> %>
+<%# <img src="../assets/images/bookings/pnb1.png" alt=""> %>
+
+<div class="formulaire_and_Item">
+  <div class="item_and_title">
+    <div class="container">
+        <h1 id = "title_Item"><%= @item.name %></h1>
+    </div>
+    <div class="mini_card">
+      <img class = 'img_item'src="https://cdn.shopify.com/s/files/1/0091/3752/0737/products/thor-mjolnir-hammer-full-metal-hammer_530x@2x.jpg?v=1627258640" alt="Objet a vendre">
+      <p><%= @item.description %></p>
+      <p><%= @item.price %></p>
+    </div>
+  </div>
+
+  <div class="formulaire_title_complete">
+    <div class="container">
+      <h1 id = "title_formulaire">Reserve your Legendary Item !</h1>
+    </div>
+
+    <div class = "container" id = "div_formulaire">
+      <%= simple_form_for [@user, @item, @booking] do |f| %>
+        <%= f.input :start_date, label: "First Day :"  %>
+        <%= f.input :end_date, label: "Last Day :" %>
+        <div class="container" id = "div_btn_formulaire">
+          <%= link_to f.submit 'Soumettre',class: 'btn1'%>
+        </div>
+      <% end %>
+  </div>
+</div>
