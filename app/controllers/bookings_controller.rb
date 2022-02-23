@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.item = @item
     if @booking.save
-      redirect_to user_item_booking_path
+      redirect_to user_item_bookings_path
     else
       render :new
     end
