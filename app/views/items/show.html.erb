@@ -1,10 +1,29 @@
-<h1>Show Items</h1>
+<%# <div class="containerz">
+  <h1>Le Super Article</h1>
 
-<div class="card-categor">
-  <div class="container">
-    <h1><%= @item.name %></h1>
-    <p><%= @item.description%></p>
-    <a href="#" class="btn btn-primary">Reserver</a>
-    <img> <%= image_tag "marteau_de_thor.jpg"%>
+  <div class="card-categor">
+    <div class="">
+      <h2 class="item_name"><%= @item.name %></h2>
+      <%# <p><%= @item.description%></p>
+      <%# <img> <%= image_tag "marteau_de_thor.jpg"%>
+    </div>
+  </div>
+</div>
+
+<%# <div class="container" id = "div_btn_formulaire">
+  <%= link_to f.submit 'Soumettre',class: 'btn1'%>
+<%# </div> %>
+<div class="containerctv">
+  <div class="card-trip">
+      <a href="#" class="btn btn-primary">Reservation</a>
+    <%= image_tag "marteau_de_thor.jpg"%>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @item.name %></h2>
+        <p><%= @item.description%></p>
+      </div>
+      <h2 class="card-trip-pricing"><%=@item.price%></h2>
+      <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+    </div>
   </div>
 </div>
