@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #1A374D;
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,7 +12,11 @@
 }
 
 .nav-link {
-  color: white!important;
+  color:black!important;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: grey;
+  opacity: 0.9;
 }
 
 #nav-search-bar {
@@ -21,4 +25,9 @@
   font-family: initial!important;
   font-size: larger!important;
   line-height: initial!important;
+}
+
+.contaiiner-fluid {
+  display: flex;
+  justify-content: space-between;
 }
