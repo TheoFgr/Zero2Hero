@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @booking = Booking.new
+    @bookings = Booking.all
   end
 
   def show
@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.item = @item
     if @booking.save
-      redirect_to user_item_bookings_path
+      redirect_to user_item_booking_path
     else
       render :new
     end
