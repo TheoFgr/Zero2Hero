@@ -12,11 +12,20 @@
 }
 
 .nav-link {
-  color:black!important;
-  border: 1px solid black;
+  color: black!important;
   border-radius: 10px;
-  background-color: grey;
+  background-color: rgb(244,244,244);
   opacity: 0.9;
+  display: grid;
+  width: 90%;
+  font-size: 10px;
+  text-align: center;
+  transition: 1s;
+
+  &:hover {
+    background-color: rgb(250,163,46);
+    opacity: 0.3;
+  }
 }
 
 #nav-search-bar {
@@ -27,7 +36,7 @@
   line-height: initial!important;
 }
 
-.contaiiner-fluid {
+.container-fluid {
   display: flex;
   justify-content: space-between;
 }

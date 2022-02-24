@@ -13,6 +13,7 @@ item1 = Item.create!(name:"Le Marteau de Thor" , description:"Super outil, toujo
 item2 = Item.create!(name:"Nimbus 2000 " , description:"Bien mieux qu'un aspirateur Dyson" , price:50, user: user2 )
 item3 = Item.create!(name:"La Cape de Frodon" , description:"A porter en toutes saisons" , price:75, user: user3 )
 item4 = Item.create!(name:"Faucon Millenium" , description:"Pour un séjour inoubliable!" , price:989, user: user4 )
+item5 = Item.create(name:"Canne à pêche", description:"Une canne incroyable (entre de bonnes mains..)", price:99999, user: user4 )
 
 Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end_date: Date.new(2022,03,16))
 Booking.create!(user: user2, item: item2, start_date: Date.new(2022,03,10) , end_date: Date.new(2022,03,15))
