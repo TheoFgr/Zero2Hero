@@ -34,8 +34,8 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = Restaurant.find(params[:id])
-    if @booking.update(booking_params)
+    @booking = Booking.find(params[:id])
+    if @booking.update(params_booking)
       redirect_to user_item_bookings_path
     else
       render :edit
@@ -43,8 +43,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to user_item_bookings_path
   end
+
   private
 
   def params_booking

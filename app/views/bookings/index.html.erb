@@ -18,8 +18,9 @@
                 <%= booking.end_date.month%>/
                 <%= booking.end_date.year%>
               </div>
-              <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
             </div>
+              <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
+              <%= link_to 'Delete', user_item_booking_path(current_user ,booking.item, booking), method: :delete  %>
           </li>
         <% end %>
       </ul>
