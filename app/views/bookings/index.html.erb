@@ -1,51 +1,21 @@
-<div class="d-flex justify-content-around"><h3>Items</h3><h3>Start Date</h3><h3>End Date</h3></div>
-  <div class = "d-flex justify-content-center" style="margin: 5rem" >
-    <div class="card" id="div-booking" style="margin-top: -5rem ; width: 65rem">
-      <ul class="list-group list-group-flush"><h3>Items</h3>
-        <% @bookings.each do |booking|%>
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between" style= "height: 3rem">
-              <div>
-                <%= link_to booking.item.name, user_item_path(current_user, booking.item.id) %>
-              </div>
-              <div>
-                <%= booking.start_date.day %>/
-                <%= booking.start_date.month%>/
-                <%= booking.start_date.year %>
-              </div>
-              <div>
-                <%= booking.end_date.day%>/
-                <%= booking.end_date.month%>/
-                <%= booking.end_date.year%>
-              </div>
-              <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
-            </div>
-          </li>
-        <% end %>
-      </ul><h3>Items</h3>
-    </div>
-  </div>
-<%= link_to "home", root_path, class: "btn1" , style: "margin-left: 35rem" %>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://imageandco.online/wp-content/uploads/2020/12/Manga-696x392.jpg)">
-  
+<div class="d-flex justify-content-around" style= "margin-top: 20px">
+<div style= "width: 200px"> <h3>Items</h3></div>
+  <h3>Start Date</h3>
+  <h3>End Date</h3>
 </div>
 <ul class="list-group list-group-flush">
   <% @bookings.each do |booking|%>
     <div>
-      <li class="list-group-item" style= "margin-bottom: 15px">
+      <li class="list-group-item" style= "margin-bottom: 15px ">
         <div class="d-flex justify-content-between" style= "height: 3rem">
-          <div>
+          <div class= "text" style = "margin-top: 10px">
             <%= booking.item.name %>
           </div>
-          <div>
-            <%= booking.start_date.day %>/0
-            <%= booking.start_date.month%>/
-            <%= booking.start_date.year %>
+          <div class= "text-date-start " style = "margin-top: 10px ">
+            <%= booking.start_date.strftime('%d/%m/%Y')%>
           </div>
-          <div>
-            <%= booking.end_date.day%>/0
-            <%= booking.end_date.month%>/
-            <%= booking.end_date.year%>
+          <div class = "text-date-end " style = "margin-top: 10px">
+            <%= booking.end_date.strftime('%d/%m/%Y')%>
           </div>
         </div>
       </li>
@@ -53,3 +23,6 @@
   <% end %>
 </ul>
 
+
+<%%# background-size : cover;
+# backgroud : center;%>
