@@ -1,30 +1,28 @@
 <div class="d-flex justify-content-around" style= "margin-top: 20px">
-<div style= "width: 200px"> <h3>Items</h3></div>
-  <h3>Start Date</h3>
-  <h3>End Date</h3>
+<div style= "width: 200px ; margin-left: 30px"> <h3>Items</h3></div>
+<div style="margin-right: 28px"> <h3>Start Date</h3> </div>
+ <div style= "margin-right: 20px"><h3>End Date</h3></div>
 </div>
 <ul class="list-group list-group-flush">
   <% @bookings.each do |booking|%>
     <div>
       <li class="list-group-item" style= "margin-bottom: 15px ">
         <div class="d-flex justify-content-between" style= "height: 3rem">
-          <div class= "text" style = "margin-top: 10px">
+          <div class= "text" style = "margin-top: 15px">
             <%= booking.item.name %>
           </div>
-          <div class= "text-date-start " style = "margin-top: 10px ">
+          <div class= "text-date-start " style = "margin-top: 15px ; margin-right: 31px">
             <%= booking.start_date.strftime('%d/%m/%Y')%>
           </div>
-          <div class = "text-date-end " style = "margin-top: 10px">
+          <div class = "text-date-end " style = "margin-top: 15px">
             <%= booking.end_date.strftime('%d/%m/%Y')%>
           </div>
         </div>
-         <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
-         <%= link_to 'Delete', user_item_booking_path(current_user ,booking.item, booking), method: :delete  %>
+        <div style="text-align: right; margin-bottom:-10px">
+          <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
+          <%= link_to 'Delete', user_item_booking_path(current_user ,booking.item, booking), method: :delete %>
+        </div>
       </li>
     </div>
   <% end %>
 </ul>
-
-
-<%%# background-size : cover;
-# backgroud : center;%>
