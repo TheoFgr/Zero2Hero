@@ -8,8 +8,8 @@
     <div>
       <li class="list-group-item" style= "margin-bottom: 15px ">
         <div class="d-flex justify-content-between" style= "height: 3rem">
-          <div class= "text" style = "margin-top: 15px">
-            <%= booking.item.name %>
+          <div class= "text" style = "margin-top: 10px">
+            <%= link_to booking.item.name, user_item_path(current_user, booking.item) %>
           </div>
           <div class= "text-date-start " style = "margin-top: 15px ; margin-right: 31px">
             <%= booking.start_date.strftime('%d/%m/%Y')%>
@@ -26,3 +26,4 @@
     </div>
   <% end %>
 </ul>
+
