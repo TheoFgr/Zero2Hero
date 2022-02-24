@@ -9,7 +9,7 @@
       <li class="list-group-item" style= "margin-bottom: 15px ">
         <div class="d-flex justify-content-between" style= "height: 3rem">
           <div class= "text" style = "margin-top: 10px">
-            <%= booking.item.name %>
+            <%= link_to booking.item.name, user_item_path(current_user, booking.item) %>
           </div>
           <div class= "text-date-start " style = "margin-top: 10px ">
             <%= booking.start_date.strftime('%d/%m/%Y')%>
@@ -18,13 +18,13 @@
             <%= booking.end_date.strftime('%d/%m/%Y')%>
           </div>
         </div>
-         <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
-         <%= link_to 'Delete', user_item_booking_path(current_user ,booking.item, booking), method: :delete  %>
+        <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
+        <%= link_to 'Delete', user_item_booking_path(current_user ,booking.item, booking), method: :delete  %>
       </li>
     </div>
   <% end %>
 </ul>
 
 
-<%%# background-size : cover;
+<%# background-size : cover;
 # backgroud : center;%>
