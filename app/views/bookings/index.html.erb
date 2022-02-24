@@ -5,11 +5,19 @@
         <% @bookings.each do |booking|%>
           <li class="list-group-item">
             <div class="d-flex justify-content-between" style= "height: 3rem">
-            <div><%= booking.item.name %></div>
-            <div><%= booking.start_date.day %>/0<%= booking.start_date.month%>/
-            <%= booking.start_date.year %></div>
-            <div><%= booking.end_date.day%>/0<%= booking.end_date.month%>/
-            <%= booking.end_date.year%> </div>
+              <div>
+                <%= booking.item.name %>
+              </div>
+              <div>
+                <%= booking.start_date.day %>/
+                <%= booking.start_date.month%>/
+                <%= booking.start_date.year %>
+              </div>
+              <div>
+                <%= booking.end_date.day%>/
+                <%= booking.end_date.month%>/
+                <%= booking.end_date.year%>
+              </div>
             </div>
           </li>
         <% end %>
