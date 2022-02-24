@@ -37,12 +37,3 @@ input.btn-back2list {
     background-color: rgba(250,163,46,0.5);
   }
 }
-
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 4;
-  }
-}
