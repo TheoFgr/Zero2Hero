@@ -9,6 +9,7 @@ user3 = User.create!(email:"user3@gmail.com" , password:"000000" , age:"43" , ad
 user4 = User.create!(email:"user4@gmail.com" , password:"000000" , age:"96" , address:"1234", first_name:"user4" , last_name:"last4")
 
 puts 'creating items'
+
 item1 = Item.create!(name:"Le Marteau de Thor" , description:"Super outil, toujours performant pour tous types de traveaux!!" , price:150, user: user1 )
 item2 = Item.create!(name:"Nimbus 2000 " , description:"Bien mieux qu'un aspirateur Dyson" , price:50, user: user2 )
 item3 = Item.create!(name:"La Cape de Frodon" , description:"A porter en toutes saisons" , price:75, user: user3 )
@@ -19,3 +20,4 @@ Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end
 Booking.create!(user: user2, item: item2, start_date: Date.new(2022,03,10) , end_date: Date.new(2022,03,15))
 Booking.create!(user: user3, item: item3, start_date: Date.new(2022,03,20) , end_date: Date.new(2022,03,25))
 Booking.create!(user: user4, item: item4, start_date: Date.new(2022,03,18) , end_date: Date.new(2022,03,20))
+
