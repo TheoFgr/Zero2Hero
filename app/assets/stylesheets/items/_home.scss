@@ -46,8 +46,9 @@ body {
   background-size: cover;
 
   &:hover {
-    transition: 1s;
+    transition: 2s;
     opacity: 0.8;
+    transform: scale(1.1)
   }
 }
 
@@ -63,15 +64,16 @@ body {
   height: 500px;
   position: relative;
   margin-bottom: 30px;
-}
-
-.card-body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+// .card-body {
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
+
 .card-text {
   position: absolute;
-  top: 300px;
+  top: 350px;
   text-align: left;
 }
 
@@ -125,7 +127,7 @@ body {
   margin-top: 10%;
   text-align: center;
   position: relative;
-  bottom: -130px;
+  bottom: -55px;
 }
 
 .reserve-btn {
