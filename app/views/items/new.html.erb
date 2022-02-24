@@ -1,0 +1,16 @@
+<h1>New Items</h1>
+
+
+<%= form_for([@user, @item]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :description %>
+
+  <%= f.label :description %>
+  <%= f.text_area :name %>
+
+  <%= f.file_field :photo, as: :file %>
+
+  <%= f.number_field :price %>
+
+  <%= f.submit 'Add Item' %>
+<% end %>

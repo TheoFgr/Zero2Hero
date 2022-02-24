@@ -7,7 +7,7 @@
         <h1 id = "title_Item"><%= @item.name %></h1>
     </div>
     <div class="mini_card">
-      <%= image_tag "marteau_de_thor.jpg", class: 'img_item' %>
+      <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
       <%# <img class = 'img_item'src="thor.jpg" alt="Objet a vendre"> %>
       <p><%= @item.description %></p>
       <p><%= @item.price %>$</p>
