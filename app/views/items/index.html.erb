@@ -34,7 +34,7 @@
       <div class="card-body">
         <h5 class="card-title"><%= item.name %></h5>
         <p class="card-text"><%= item.description %></p>
-        <p class="item-price">$ <%= item.price %> /day</p>
+        <p class="item-price">$ <%= item.price %>/day</p>
         <%= link_to "Reserve", new_user_item_booking_path(current_user.id,item) %>
       </div>
     </div>
