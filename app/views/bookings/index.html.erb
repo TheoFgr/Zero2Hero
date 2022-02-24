@@ -18,6 +18,7 @@
                 <%= booking.end_date.month%>/
                 <%= booking.end_date.year%>
               </div>
+              <%= link_to 'Edit', edit_user_item_booking_path(current_user, booking.item.id, booking) %>
             </div>
           </li>
         <% end %>
