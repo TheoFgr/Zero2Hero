@@ -36,22 +36,62 @@ body {
   }
 }
 
-#carouselExampleControls {
+#carouselExampleCaptions {
   margin: auto;
   width: 70%;
   margin-top: 6%;
+  display: flex;
+  position: relative;
+  height: 620px;
+  background-size: cover;
+
+  &:hover {
+    transition: 1s;
+    opacity: 0.8;
+  }
 }
 
+
+.category-title {
+  position: absolute;
+  color: white;
+  bottom: 100px;
+}
+
+
 .card {
-  max-height: 400px;
+  height: 500px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .card-body {
-  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-text {
+  position: absolute;
+  top: 300px;
+  text-align: left;
 }
 
 .card-title {
   font-family: 'Work Sans', sans-serif;
+  margin-top: 10px;
+  margin-top: 7px;
+}
+
+.card-btn1 {
+  position: absolute;
+  bottom: 15px;
+  left: 70%;
+  border-radius: 25px;
+  background-color: #F5F5F5;
+  padding: 7px;
+}
+
+.card-info {
+
 }
 
 .btn2 {
@@ -60,7 +100,7 @@ body {
 } a {
   text-decoration: none;
   color: black;
-  transition: 3s;
+  transition: 2s;
 
 &:hover {
     color: rgb(250,163,46);
@@ -69,18 +109,23 @@ body {
 }
 
 .items-homepage {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 3%;
     margin-top: 25px;
-    justify-content: space-evenly;
     max-width: 90%;
     margin: auto;
     margin-top: 6%;
+    border-radius: 10px;
 }
 
 .item-price {
   font-size: 14px;
   font-style: italic;
   margin-top: 10%;
+  text-align: center;
+  position: relative;
+  bottom: -130px;
 }
 
 .reserve-btn {
