@@ -30,7 +30,7 @@
 <div class="items-homepage">
   <% @items.each do |item| %>
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://i.pinimg.com/originals/44/78/f6/4478f6b3ac497b92d464cf3004057722.jpg" alt="Les 7 dragon balls">
+      <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= item.name %></h5>
         <p class="card-text"><%= item.description %></p>
