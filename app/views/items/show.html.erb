@@ -51,7 +51,11 @@
         <%= link_to "Acceuil", root_path, class: "btn btn-gradient" %>
         <%= link_to "Reserver", new_user_item_booking_path(current_user.id, @item), class: "btn btn-gradient" %>
       </div>
-      <%= cl_image_tag @item.photo.key, height: 300, width: 450, crop: :fill %>
+      <% if @item.photo.attached? %>
+        <%= cl_image_tag @item.photo.key, crop: :fill %>
+      <% else %>
+        <img src="https://avatars.githubusercontent.com/u/55115774?v=4" alt="photo">
+      <% end %>
       <div class="card-trip-infos">
         <div>
           <h2><%= @item.name %></h2>
