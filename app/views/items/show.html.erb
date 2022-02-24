@@ -20,10 +20,12 @@
   <div class="card-avatar">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
 
+
     <div class="d-flex flex-column">
       <div class="card-avatar-infos">
-        <h2>Vincent</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <h2><%= @item.user.email %> <%= @item.user.last_name %></h2>
+        <p> <strong>Email :</strong><%= @item.user.email %> <strong>Age :</strong><%= @item.user.age %></p>
+        <p> <strong>Address: </strong><%= @item.user.address %></p>
       </div>
       <div class="rating-css">
         <%# <div>star</div> %>
