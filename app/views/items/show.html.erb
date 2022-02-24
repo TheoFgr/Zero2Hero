@@ -15,8 +15,11 @@
 <%# </div> %>
 <div class="containerctv">
   <div class="card-trip">
-      <a href="#" class="btn btn-primary">Reservation</a>
-    <%= image_tag "marteau_de_thor.jpg"%>
+    <div class="btn">
+      <%= link_to "Acceuil", root_path, class: "btn btn-gradient" %>
+      <%= link_to "Reserver", new_user_item_booking_path(current_user.id, @item), class: "btn btn-gradient" %>
+    </div>
+    <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <h2><%= @item.name %></h2>

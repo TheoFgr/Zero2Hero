@@ -1,20 +1,29 @@
-<div class="d-flex justify-content-around"><h3>Items</h3><h3>Start Date</h3><h3>End Date</h3>
+<div class="d-flex justify-content-around">
+  <h3>Items</h3>
+  <h3>Start Date</h3>
+  <h3>End Date</h3>
 </div>
-  <ul class="list-group list-group-flush">
-    <% @bookings.each do |booking|%>
+<ul class="list-group list-group-flush">
+  <% @bookings.each do |booking|%>
     <div>
       <li class="list-group-item" style= "margin-bottom: 15px">
         <div class="d-flex justify-content-between" style= "height: 3rem">
-        <div>
-        <%= booking.item.name %></div>
-      <div>
-        <%= booking.start_date.day %>/0<%= booking.start_date.month%>/
-        <%= booking.start_date.year %></div>
-        <div><%= booking.end_date.day%>/0<%= booking.end_date.month%>/
-        <%= booking.end_date.year%> </div>
-    </div>
+          <div>
+            <%= booking.item.name %>
+          </div>
+          <div>
+            <%= booking.start_date.day %>/0
+            <%= booking.start_date.month%>/
+            <%= booking.start_date.year %>
+          </div>
+          <div>
+            <%= booking.end_date.day%>/0
+            <%= booking.end_date.month%>/
+            <%= booking.end_date.year%>
+          </div>
+        </div>
       </li>
-       </div>
-      <% end %>
-  </ul>
-</div>
+    </div>
+  <% end %>
+</ul>
+

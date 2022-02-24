@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "occulte.png" %>
     <% end %>
     <form class="navbar-search pull-left" >
@@ -14,10 +14,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "", "#", class: "nav-link" %>
+            <%= link_to "My bookings", user_item_bookings_path(current_user, 0), class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "", "#", class: "nav-link" %>
+            <%= link_to "+ New item", new_user_item_path(current_user, @item), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://avatars.githubusercontent.com/u/96440289?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -36,3 +36,5 @@
     </div>
   </div>
 </div>
+
+ <%# <%= link_to "MyBookings", user_item_bookings_path(current_user.id, @items)'%' %>
