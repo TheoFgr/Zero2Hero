@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = Item.new(params_item)
     @item.user = @user
     if @item.save
-      redirect_to user_item_path(@item)
+      redirect_to new_user_item_booking_path(@user, @item)
     else
       render :new
     end
@@ -26,6 +26,6 @@ class ItemsController < ApplicationController
   private
 
   def params_item
-    params.require(:item).permit(:name, :description, :price)
+    params.require(:item).permit(:name, :description, :price, :photo)
   end
 end

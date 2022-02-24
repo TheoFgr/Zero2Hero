@@ -16,7 +16,7 @@
 <div class="containerctv">
   <div class="card-trip">
       <a href="#" class="btn btn-primary">Reservation</a>
-    <%= image_tag "marteau_de_thor.jpg"%>
+        <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <h2><%= @item.name %></h2>
