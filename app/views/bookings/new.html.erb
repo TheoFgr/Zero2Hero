@@ -1,32 +1,22 @@
-<%# <h1>Booking New</h1> %>
-<%# <img src="../assets/images/bookings/pnb1.png" alt=""> %>
-
-<div class="formulaire_and_Item">
-  <div class="item_and_title">
-    <div class="container">
-        <h1 id = "title_Item"><%= @item.name %></h1>
-    </div>
-    <div class="mini_card">
-      <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
-      <%# <img class = 'img_item'src="thor.jpg" alt="Objet a vendre"> %>
-      <p><%= @item.description %></p>
-      <p><%= @item.price %>$</p>
-    </div>
-  </div>
-
-  <div class="formulaire_title_complete">
-    <div class="container">
-      <h1 id = "title_formulaire">Reserve your Legendary Item !</h1>
-    </div>
-
-    <div class = "container" id = "div_formulaire">
-      <%= simple_form_for [@user, @item, @booking] do |f| %>
-        <%= f.input :start_date, label: "First Day :"  %>
-        <%= f.input :end_date, label: "Last Day :" %>
-        <div class="container" id = "div_btn_formulaire">
-          <%= f.submit 'Soumettre', class: 'btn1' %>
+<div class="newbooking">
+  <div class="containerctv">
+    <div class="card-trip">
+      <%= image_tag "marteau_de_thor.jpg"%>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @item.name %></h2>
+          <p><%= @item.description%></p>
         </div>
-      <% end %>
+        <h2 class="card-trip-pricing">$ <%=@item.price%> /day</h2>
+      </div>
+    </div>
   </div>
-  <%= link_to "Home", root_path, class: "btn1" %>
+  
+  <div class="formbooking">
+    <%= simple_form_for [@user, @item, @booking] do |f| %>
+      <%= f.input :start_date, label: "First Day :"  %>
+      <%= f.input :end_date, label: "Last Day :" %>
+      <%= f.submit 'Reserve', class: 'btn-back2list' %>
+    <% end %>
+  </div>
 </div>
