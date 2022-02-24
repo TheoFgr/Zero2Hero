@@ -27,6 +27,24 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+    @item = Item.find(params[:item_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Restaurant.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to user_item_bookings_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+
+  end
   private
 
   def params_booking
