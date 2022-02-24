@@ -6,7 +6,7 @@
           <li class="list-group-item">
             <div class="d-flex justify-content-between" style= "height: 3rem">
               <div>
-                <%= booking.item.name %>
+                <%= link_to booking.item.name, user_item_path(current_user, booking.item.id) %>
               </div>
               <div>
                 <%= booking.start_date.day %>/
