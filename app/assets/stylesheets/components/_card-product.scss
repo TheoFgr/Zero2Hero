@@ -1,76 +1,12 @@
-.card-trip {
-  border-radius: 15px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+@import "modél-card-product/card-avatar";
+@import "modél-card-product/card-item";
+@import "modél-card-product/card-btn";
+@import "modél-card-product/star-rating";
+@import "modél-card-product/card-item-category";
 
-.card-trip > img {
-
-  object-fit: fill;
-  height: 300px;
-  width: 100%;
-  object-fit: scale-down;;
-}
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
+.container-card {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
-.containerctv {
-
-width: 440px;
-position: relative;
-left: 37%;
-top: 85px;
-}
-
-.btn-btn-primary {
-  border-bottom-right-radius: 20px 20px;
-}
-
-.btn-gradient {
-  color: black;
-  border: 1px solid black;
-  padding: 8px 24px;
-  border-radius: 15px;
-  font-weight: lighter;
-  transition: opacity 0.3s ease;
-}
-
-.btn-gradient:hover {
-  // opacity: 0.5;
-  border-color: blue;
-  color: blue;
-}
-
-.btn {
-
-display: flex;
-justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column-reverse;
 
 }

@@ -21,3 +21,5 @@ Booking.create!(user: user2, item: item2, start_date: Date.new(2022,03,10) , end
 Booking.create!(user: user3, item: item3, start_date: Date.new(2022,03,20) , end_date: Date.new(2022,03,25))
 Booking.create!(user: user4, item: item4, start_date: Date.new(2022,03,18) , end_date: Date.new(2022,03,20))
 
+Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end_date: Date.new(2022,03,16))
+
