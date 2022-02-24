@@ -13,20 +13,67 @@
 <%# <div class="container" id = "div_btn_formulaire">
   <%= link_to f.submit 'Soumettre',class: 'btn1'%>
 <%# </div> %>
-<div class="containerctv">
-  <div class="card-trip">
-    <div class="btn">
-      <%= link_to "Acceuil", root_path, class: "btn btn-gradient" %>
-      <%= link_to "Reserver", new_user_item_booking_path(current_user.id, @item), class: "btn btn-gradient" %>
-    </div>
-    <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= @item.name %></h2>
-        <p><%= @item.description%></p>
+<div class="container-card">
+<div class="row">
+  <div class="col-7">
+
+  <div class="card-avatar">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
+
+    <div class="d-flex flex-column">
+      <div class="card-avatar-infos">
+        <h2><%= @item.user.email %> <%= @item.user.last_name %></h2>
+        <p> <strong>Email :</strong><%= @item.user.email %> <strong>Age :</strong><%= @item.user.age %></p>
+        <p> <strong>Address: </strong><%= @item.user.address %></p>
       </div>
-      <h2 class="card-trip-pricing"><%=@item.price%></h2>
-      <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+      <div class="rating-css">
+        <%# <div>star</div> %>
+        <div class="star-icon">
+          <input type="radio" name="rating1" id="rating1">
+          <label for="rating1" class="fa fa-star"></label>
+          <input type="radio" name="rating1" id="rating2">
+          <label for="rating2" class="fa fa-star"></label>
+          <input type="radio" name="rating1" id="rating3">
+          <label for="rating3" class="fa fa-star"></label>
+          <input type="radio" name="rating1" id="rating4">
+          <label for="rating4" class="fa fa-star"></label>
+          <input type="radio" name="rating1" id="rating5">
+          <label for="rating5" class="fa fa-star"></label>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+    <div class="card-trip">
+      <div class="btn">
+        <%= link_to "Acceuil", root_path, class: "btn btn-gradient" %>
+        <%= link_to "Reserver", new_user_item_booking_path(current_user.id, @item), class: "btn btn-gradient" %>
+      </div>
+      <%= cl_image_tag @item.photo.key, height: 300, width: 450, crop: :fill %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @item.name %></h2>
+          <p><%= @item.description%></p>
+        </div>
+        <h2 class="card-trip-pricing"><%=@item.price%></h2>
+      </div>
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="card-item-category">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-card-item-category-infos">
+        <h2>Product name</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+
+  </div>
+</div>
+
+</div>
+
+
   </div>
 </div>
