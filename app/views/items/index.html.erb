@@ -2,7 +2,7 @@
 <%# banner, revoir bouton, font du text %>
 <div class="banner_img">
   <h1> Anyone want to possess incredible POWER</h1>
-  <a href="#" class="btn1">Become a legend</a>
+  <a href="#linkhometoitem" class="btn1">Become a legend</a>
 </div>
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -36,7 +36,7 @@
   </button>
 </div>
 
-<div class="items-homepage">
+<div class="items-homepage" id="linkhometoitem">
   <% @items.each do |item| %>
     <div class="card" style="width: 18rem;">
       <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill %>
