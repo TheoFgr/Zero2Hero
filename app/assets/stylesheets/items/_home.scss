@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-position: right;
   position: relative;
+  padding: 15px;
 } h1 {
   color: white;
   text-align: center;
@@ -84,6 +85,7 @@ body {
   border-top-left-radius: 15px;
 
   background-size: cover;
+  padding: 15px;
 }
 
 // .card-body {
@@ -138,6 +140,7 @@ body {
     margin: auto;
     margin-top: 6%;
     border-radius: 10px;
+    padding-bottom: 300px;
 }
 
 .item-price {
@@ -151,6 +154,7 @@ body {
   border-radius: 25px;
   padding: 7px;
   }
+
 
 .reserve-btn {
   box-shadow: 1px solid red;

@@ -13,15 +13,13 @@
   </head>
 
   <body>
+    <div style= "min-height: 100vh;">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
-    <div id="bodydiv">
-    <%= yield %>
+      <%= yield %>
+    <footer>
+      <%= render 'shared/footer' %>
+    </footer>
     </div>
-
-  <footer>
-    <%= render 'shared/footer' %>
-  </footer>
   </body>
 </html>
