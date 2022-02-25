@@ -16,10 +16,13 @@ item3 = Item.create!(name:"La Cape de Frodon" , description:"A porter en toutes 
 item4 = Item.create!(name:"Faucon Millenium" , description:"Pour un séjour inoubliable!" , price:989, user: user4 )
 item5 = Item.create(name:"Canne à pêche", description:"Une canne incroyable (entre de bonnes mains..)", price:99999, user: user4 )
 
-Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end_date: Date.new(2022,03,16))
+
 Booking.create!(user: user2, item: item2, start_date: Date.new(2022,03,10) , end_date: Date.new(2022,03,15))
 Booking.create!(user: user3, item: item3, start_date: Date.new(2022,03,20) , end_date: Date.new(2022,03,25))
 Booking.create!(user: user4, item: item4, start_date: Date.new(2022,03,18) , end_date: Date.new(2022,03,20))
-
 Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end_date: Date.new(2022,03,16))
 
+category1 = Category.create!(name: 'Movies')
+category2 = Category.create!(name: 'Animate')
+
+ItemCategory.create!(item: item1, category: category1)
