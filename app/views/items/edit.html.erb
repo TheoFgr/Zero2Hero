@@ -1,0 +1,30 @@
+<div class="new-form" style="margin-top: 75px; margin-left: 400px">
+  <%= form_for([@user, @item]) do |f| %>
+    <div><%= f.label :name %>
+    </div>
+    <div>
+    <%= f.text_field :name %>
+    </div>
+
+  <div style="margin-top: 14px;">
+    <div style="display: flex;">
+      <%= f.label :description, class: "margin-right "%>
+    </div>
+    <div style="margin-left: 12px; width: 10px;"><%= f.text_area :description %>
+    </div>
+  </div>
+
+  <div style="margin-top:25px;">
+    <%= f.file_field :photo, as: :file %>
+  </div>
+
+  <div style="margin-top: 25px; margin-right: 25px ">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div style="margin-top: 25px">
+    <%= f.submit 'add my item' %>
+  </div>
+  <% end %>
+</div>
