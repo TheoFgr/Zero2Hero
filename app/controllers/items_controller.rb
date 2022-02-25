@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
     @user = current_user
   end
 
+
   def create
     @user = current_user
     @item = Item.new(params_item)
@@ -21,6 +22,30 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+    @user = current_user
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(params_item)
+      redirect_to my_items_user_items_path(current_user, @item)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to my_items_user_items_path(current_user, @item)
+  end
+
+  def my_items
+      @items = Item.where(user: current_user)
   end
 
   private

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   end
   resources :users do
     resources :items, expect: [:index] do
+      collection do
+        get :my_items
+      end
       resources :bookings
     end
   end
