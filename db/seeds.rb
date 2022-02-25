@@ -10,19 +10,18 @@ user4 = User.create!(email:"user4@gmail.com" , password:"000000" , age:"96" , ad
 
 puts 'creating items'
 
-item1 = Item.create!(name:"Le Marteau de Thor" , description:"Super outil, toujours performant pour tous types de traveaux!!" , price:150, user: user1 )
-item2 = Item.create!(name:"Nimbus 2000 " , description:"Bien mieux qu'un aspirateur Dyson" , price:50, user: user2 )
-item3 = Item.create!(name:"La Cape de Frodon" , description:"A porter en toutes saisons" , price:75, user: user3 )
-item4 = Item.create!(name:"Faucon Millenium" , description:"Pour un séjour inoubliable!" , price:989, user: user4 )
-item5 = Item.create(name:"Canne à pêche", description:"Une canne incroyable (entre de bonnes mains..)", price:99999, user: user4 )
+item1 = Item.create!(name:"Le Marteau de Thor" , description:"Super outil, toujours performant pour tous types de traveaux!!" , price:150, user: user1, category: "Movie" )
+item2 = Item.create!(name:"Nimbus 2000 " , description:"Bien mieux qu'un aspirateur Dyson" , price:50, user: user2, category: "Movie" )
+item3 = Item.create!(name:"La Cape de Frodon" , description:"A porter en toutes saisons" , price:75, user: user3, category: "Movie" )
+item4 = Item.create!(name:"Faucon Millenium" , description:"Pour un séjour inoubliable!" , price:989, user: user4, category: "Movie" )
+item5 = Item.create(name:"Canne à pêche", description:"Une canne incroyable (entre de bonnes mains..)", price:99999, user: user4, category: "Animate" )
 
+puts 'Creating Bookings'
 
 Booking.create!(user: user2, item: item2, start_date: Date.new(2022,03,10) , end_date: Date.new(2022,03,15))
 Booking.create!(user: user3, item: item3, start_date: Date.new(2022,03,20) , end_date: Date.new(2022,03,25))
 Booking.create!(user: user4, item: item4, start_date: Date.new(2022,03,18) , end_date: Date.new(2022,03,20))
 Booking.create!(user: user1, item: item1, start_date: Date.new(2022,03,15) , end_date: Date.new(2022,03,16))
 
-category1 = Category.create!(name: 'Movies')
-category2 = Category.create!(name: 'Animate')
-
-ItemCategory.create!(item: item1, category: category1)
+category1 = Category.create(name: 'Movies')
+category2 = Category.create(name: 'Animate')
