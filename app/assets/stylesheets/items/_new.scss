@@ -1,13 +1,61 @@
 .new-form {
     display: flex;
-    justify-content: space-between;
-    height: 800px;
-    width: 25%;
-    margin: auto;
+    justify-content: center;
+    height: 360px;
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 420px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 25px;
+    align-items: center;
 }
 
-
 .margin-right {
+  justify-content: center;
   margin-right: 102px;
   width:15px;
+}
+
+.attache-name-rectangle {
+  display: flex;
+
+}
+
+.rectangle-name {
+  margin-left: 73px;
+}
+
+.attache-description-rectangle {
+  display: flex;
+  margin-top : 20px;
+  margin-left: -2px;
+}
+
+.description {
+  width: 150px;
+}
+
+.rectangle-description {
+  margin-left: -31px;
+}
+
+.attache-parcourir {
+  margin-top:25px;
+  margin-left: 0px;
+}
+
+.attache-price {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.rectangle-price {
+  margin-left: 80px;
+}
+
+.add-item {
+  display:flex;
+  margin-left: 244px;
+  margin-top: 25px;
 }
