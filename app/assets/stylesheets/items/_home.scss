@@ -65,6 +65,16 @@ body {
   position: relative;
   margin-bottom: 30px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+
+}
+
+.img-item {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 // .card-body {

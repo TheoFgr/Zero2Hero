@@ -1,3 +1,9 @@
+.container-category {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .card-item-category {
   border-radius: 15px;
   width: 400px;
@@ -8,10 +14,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   margin-left: 15px;
-
 }
+
+
 
 .card-item-category img {
   border-radius: 15px;
