@@ -1,3 +1,28 @@
-<h1>Show Category</h1>
-
-<%= category.item %>
+<h2 style=
+    "text-align: center;
+    margin-top: 30px;
+    opacity: 0.7;">
+    <%= @category.name %></h2>
+<div class="category-container">
+  <div class="items-homepage" style="margin-top: 3%" id="linkhometoitem">
+    <% @items.each do |item| %>
+      <div class="card" style="width: 18rem;">
+        <% if item.photo.attached? %>
+          <%= cl_image_tag item.photo.key, crop: :fill %>
+        <% else %>
+          <img class="img-item" src="https://avatars.githubusercontent.com/u/55115774?v=4" alt="photo">
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= item.name %></h5>
+            <div class="card-info">
+              <p class="card-text"><%= item.description %></p>
+              <p class="item-price">$ <%= item.price %>/day</p>
+            </div>
+            <div class="card-btn1">
+              <%= link_to "Reserve", new_user_item_booking_path(current_user.id,item) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

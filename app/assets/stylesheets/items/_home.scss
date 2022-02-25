@@ -126,7 +126,7 @@ body {
 .items-homepage {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 3%;
+    gap: 3%;
     margin-top: 25px;
     max-width: 90%;
     margin: auto;
